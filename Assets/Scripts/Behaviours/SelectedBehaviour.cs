@@ -4,10 +4,11 @@ using UnityEngine;
 using DG.Tweening;
 using AnimaresTest.Channels;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 namespace AnimaresTest.Behaviours
 {
-    public class SelectedBehaviour : MonoBehaviour
+    public class SelectedBehaviour : MonoBehaviour, IPointerClickHandler
     {
         [SerializeField] private BoolChannel _selectedChannel;
         [SerializeField] private BoolChannel _restartChannel;
@@ -28,8 +29,9 @@ namespace AnimaresTest.Behaviours
             _restartChannel.Action -= Restart;
         }
 
-        private void OnMouseDown()
+        public void OnPointerClick(PointerEventData eventData)
         {
+            Debug.Log("[OnPointerClick]");
             if (_selected)
             {
                 return;
@@ -43,7 +45,6 @@ namespace AnimaresTest.Behaviours
 
         public void Restart(bool restart)
         {
-            Debug.Log("[Sceen2][Restart]");
             if (_selected)
             {
                 transform.SetParent(_parent);
