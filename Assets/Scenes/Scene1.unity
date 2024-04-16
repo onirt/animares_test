@@ -598,7 +598,6 @@ RectTransform:
   m_Children:
   - {fileID: 8375058}
   - {fileID: 1088021263}
-  - {fileID: 1796663490}
   - {fileID: 42268870}
   - {fileID: 1014621655}
   m_Father: {fileID: 0}
@@ -1488,12 +1487,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6912108058932114024, guid: 0b81f5f4227ae4febae86f3c2bb27cf9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 1509084103938950627, guid: 0b81f5f4227ae4febae86f3c2bb27cf9, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8568476493313155744, guid: 0b81f5f4227ae4febae86f3c2bb27cf9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1796663490}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b81f5f4227ae4febae86f3c2bb27cf9, type: 3}
 --- !u!1 &1674003138
@@ -1586,7 +1588,6 @@ GameObject:
   - component: {fileID: 1796663493}
   - component: {fileID: 1796663492}
   - component: {fileID: 1796663491}
-  - component: {fileID: 1796663494}
   m_Layer: 5
   m_Name: Button Restrt
   m_TagString: Untagged
@@ -1607,7 +1608,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 510783928}
-  m_Father: {fileID: 535778220}
+  m_Father: {fileID: 1820893129}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1708,34 +1709,9 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796663489}
   m_CullTransparentMesh: 1
---- !u!114 &1796663494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1796663489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cfae07d8e88241208cbafa3db5b0f40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FadeInChannel: {fileID: 0}
-  FadeOutChannel: {fileID: 0}
-  <Duration>k__BackingField: 1
-  <SyncEnable>k__BackingField: 0
-  <StartValue>k__BackingField: 0
-  <EndValue>k__BackingField: 1
-  <OnIn>k__BackingField:
-    m_PersistentCalls:
-      m_Calls: []
-  <OnOut>k__BackingField:
-    m_PersistentCalls:
-      m_Calls: []
-  _canvasGroup: {fileID: 1820893128}
---- !u!225 &1820893128 stripped
-CanvasGroup:
-  m_CorrespondingSourceObject: {fileID: 5888461819900300170, guid: 0b81f5f4227ae4febae86f3c2bb27cf9, type: 3}
+--- !u!224 &1820893129 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8568476493313155744, guid: 0b81f5f4227ae4febae86f3c2bb27cf9, type: 3}
   m_PrefabInstance: {fileID: 1592179856}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1840956617
