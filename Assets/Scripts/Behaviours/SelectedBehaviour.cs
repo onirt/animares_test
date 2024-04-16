@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 
 namespace AnimaresTest.Behaviours
 {
-    public class SelectedBehaviour : MonoBehaviour, IPointerClickHandler
+    public class SelectedBehaviour : MonoBehaviour
     {
         [SerializeField] private BoolChannel _selectedChannel;
         [SerializeField] private BoolChannel _restartChannel;
@@ -28,8 +28,7 @@ namespace AnimaresTest.Behaviours
         {
             _restartChannel.Action -= Restart;
         }
-
-        public void OnPointerClick(PointerEventData eventData)
+        private void OnMouseDown()
         {
             Debug.Log("[OnPointerClick]");
             if (_selected)
